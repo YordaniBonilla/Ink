@@ -6,6 +6,7 @@ import Book from './Components/Book.jsx'
 import Navigation from './Components/Navigation.jsx'
 import axios from 'axios';
 import MapContainer from './Components/MapContainer.jsx'
+import OMG from './Components/Nat.jsx'
 
 class App extends Component {
   constructor(props) {
@@ -72,7 +73,8 @@ class App extends Component {
             <Switch>
               <Route exact path="/" render={(props) => <Home {...props} data={this.state.styles} selectStyles={this.selectStyles} style={this.state.style}/>} />
               <Route path="/map" component={MapContainer }></Route>
-              <Route path="/login" ></Route>            
+              <Route path="/login" ></Route>   
+              <Route path="/nat" component={OMG}></Route>         
             </Switch>
         </div>
       </BrowserRouter>

@@ -36,6 +36,7 @@
     "react-responsive-carousel": "^3.1.49",
     "react-router-dom": "^4.3.1",
     "react-select": "^2.4.3",
+    "react-sound": "^1.2.0",
     "reactjs-dropdown-component": "^1.0.6",
     "reactstrap": "^8.0.0"
   },
