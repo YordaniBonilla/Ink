@@ -1,30 +1,45 @@
-import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
-"mdbreact";
+import React from 'react';
+import ReactDom from 'react-dom';
+import LoginBox from './LoginBox.jsx';
+import Register from './Register.jsx';
+<<<<<<< HEAD
 
-import Carousel from './Carousel.jsx';
-import './home.css'
+=======
+>>>>>>> d22b7c28b5f8436001d5401cc6c8418fbe1d2eef
 
-const Home = (props) => (
-  <div>
-      <h1 align="center">InkPlace</h1>
-        <div align="center">
+class Home extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state = {};
+    }
+    submitLogin(e) {
         
-  </div>
-
-  <div>
-    <p>{props.style.info}</p>
-  </div>
-
-  <center>
-    <div className='slideshow'>
-   <Carousel />
-  </div>
-  </center>
-  
-  </div>
-
-);
+    }
+    submitRegister(e) {
+        
+    }
+    render(){
+        return (
+          <div className="root-container"> 
+        
+          <div className="box-controller">
+          <div className="controller">
+            <LoginBox/>
+          </div>
+<<<<<<< HEAD
+                 
+=======
+>>>>>>> d22b7c28b5f8436001d5401cc6c8418fbe1d2eef
+          <div className="controller">
+            <Register />
+          </div>
+          </div>
+          <div className="box-container">
+          </div>
+          </div>
+        )}
+    }
 
 export default Home;
+

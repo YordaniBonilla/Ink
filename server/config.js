@@ -6,6 +6,7 @@ const db = require('../database/mysql.js')
 const app = express();
 const nodemailer = require('nodemailer')
 const path = require('path')
+const email = require('../server/email.js')
 
 //middleware
 app.use(compression());
@@ -31,6 +32,9 @@ app.get("/home-images", route.imagesByStyle)
 
 app.post("/book", route.getApp)
 
+<<<<<<< HEAD
+app.post('/api/form',email.sendMail)
+=======
 app.post('/api/form', (req, res) => {
   nodemailer.createTestAccount((err, account) => {
     const htmlEmail = `
@@ -42,20 +46,22 @@ app.post('/api/form', (req, res) => {
     <h3>Comments</h3>
     <p>${req.body.message}</p>
     <h3>Tattoo location</h3>
-    <p>${req.body.location}</p>
+    <p>${req.body.bodyPart}</p>
+    <h3>Date of Appointment</h3>
+    <p>${req.body.date}</p>
       `
     let transporter = nodemailer.createTransport({
       host: 'smtp.ethereal.email',
       port:587,
       auth: {
-        user: 'chasity.erdman@ethereal.email',
-        pass: 'WzbXbWr8Yg1xuFckup'
+        user: '	monica.hudson89@ethereal.email',//change this email
+        pass: 'KmCmxq41pwa78k9KgY'//change password
       }
     })
     
     let mailOptions = {
       from: 'test@testaccount.com',
-      to: 'chasity.erdman@ethereal.email',
+      to: '	monica.hudson89@ethereal.email',//use same email
       replyTo: 'test@testaccount.com',
       subject: 'New Message',
       text: req.body.message,
@@ -71,5 +77,6 @@ app.post('/api/form', (req, res) => {
     })
   })
 })
+>>>>>>> d22b7c28b5f8436001d5401cc6c8418fbe1d2eef
 
 module.exports = app;
